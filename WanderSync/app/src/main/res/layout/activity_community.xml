@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CommunityActivity">
+
+    <include layout="@layout/activity_feature_base" />
+
+    <!-- Header for Community Screen -->
+    <TextView
+        android:id="@+id/community_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Travel Community"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/form_container"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginBottom="100dp"
+        app:cardElevation="4dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/form_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Travel Post"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/start_date_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Start Date (MM-DD-YYYY)"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/form_header" />
+
+            <EditText
+                android:id="@+id/end_date_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="End Date (MM-DD-YYYY)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/start_date_input" />
+
+            <EditText
+                android:id="@+id/destination_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Destination"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/end_date_input" />
+
+            <EditText
+                android:id="@+id/accommodations_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Accommodations"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/destination_input" />
+
+            <EditText
+                android:id="@+id/dining_reservations_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Dining Reservations"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/accommodations_input" />
+
+            <EditText
+                android:id="@+id/notes_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Notes (start with * to post anonymously)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dining_reservations_input" />
+
+            <Button
+                android:id="@+id/add_post_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Add Post"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notes_input" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_post_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/community_recycler_view"
+        android:layout_width="390dp"
+        android:layout_height="471dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/community_header" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="+"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

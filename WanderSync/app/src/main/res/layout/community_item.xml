@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Start Date -->
+        <TextView
+            android:id="@+id/start_date_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Start Date: MM-DD-YYYY"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- End Date -->
+        <TextView
+            android:id="@+id/end_date_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="End Date: MM-DD-YYYY"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/start_date_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Duration -->
+        <TextView
+            android:id="@+id/duration_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Duration: X days"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/end_date_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Destination -->
+        <TextView
+            android:id="@+id/destination_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Destination: Location"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/duration_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Accommodations -->
+        <TextView
+            android:id="@+id/accommodations_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Accommodations: Details"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/destination_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Dining Reservations -->
+        <TextView
+            android:id="@+id/dining_reservations_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Dining Reservations: Details"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/accommodations_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Notes -->
+        <TextView
+            android:id="@+id/notes_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Notes: Additional Comments"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/dining_reservations_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

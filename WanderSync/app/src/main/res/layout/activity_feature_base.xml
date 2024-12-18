@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AccommodationsActivity">
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Logistics Icon -->
+        <ImageView
+            android:id="@+id/nav_logistics"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_weight="1"
+            android:contentDescription="Logistics"
+            android:src="@drawable/logistics" />
+
+        <!-- Destination Icon -->
+        <ImageView
+            android:id="@+id/nav_destination"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Destination"
+            android:src="@drawable/destination" />
+
+        <!-- Dining Icon -->
+        <ImageView
+            android:id="@+id/nav_dining"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Dining"
+            android:src="@drawable/dining" />
+
+        <!-- Accommodations Icon -->
+        <ImageView
+            android:id="@+id/nav_accommodations"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Accommodations"
+            android:src="@drawable/accommodations" />
+
+        <!-- Transportation Icon -->
+        <ImageView
+            android:id="@+id/nav_transportation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Transportation"
+            android:src="@drawable/transportation" />
+
+        <!-- Travel Community Icon -->
+        <ImageView
+            android:id="@+id/nav_community"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Travel Community"
+            android:src="@drawable/community" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

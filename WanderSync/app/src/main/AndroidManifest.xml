@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SprintProject"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.SharedTripSpecificsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SharedTripSpecifcs"
+            android:exported="false"
+            android:label="@string/title_activity_shared_trip_specifcs"
+            android:theme="@style/Theme.SprintProject" />
+        <activity
+            android:name=".SpecificTrip"
+            android:exported="false"
+            android:theme="@style/Theme.SprintProject" /> <!-- Declare SplashScreen as the launcher activity -->
+        <activity
+            android:name=".view.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.LoginScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.RegistrationScreen"
+            android:exported="true" /> <!-- MainActivity should not have an intent-filter if it's not the launcher -->
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true" /> <!-- Declare the other activities -->
+        <activity android:name=".view.LogisticsActivity" />
+        <activity android:name=".view.DestinationActivity" />
+        <activity android:name=".view.DiningActivity" />
+        <activity android:name=".view.AccommodationsActivity" />
+        <activity android:name=".view.TransportationActivity" />
+        <activity android:name=".view.CommunityActivity" />
+        <activity android:name=".view.InviteActivity" />
+        <activity android:name=".view.NotesActivity" />
+    </application>
+
+</manifest>

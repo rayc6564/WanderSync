@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "921328895394",
+    "firebase_url": "https://sprintproject-a7169-default-rtdb.firebaseio.com",
+    "project_id": "sprintproject-a7169",
+    "storage_bucket": "sprintproject-a7169.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921328895394:android:20589854ee67819e485efb",
+        "android_client_info": {
+          "package_name": "com.example.sprintproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIZ_SXusI4fWmGlmmUnpFPVAIu3A-QTQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

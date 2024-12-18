@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="duration"
+            type="String"/>
+        <variable
+            name="note"
+            type="String"/>
+    </data>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.SharedTripSpecificsActivity">
+
+        <TextView
+            android:id="@+id/tripDurationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip Duration:"
+            android:textSize="30sp"
+            android:paddingTop="15dp"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/durationNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Days"
+            android:textSize="30sp"
+            android:paddingLeft="10dp"/><!-- "@={duration}" -->
+
+        <TextView
+            android:id="@+id/destinationsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:paddingLeft="10dp"
+            android:paddingTop="25dp"
+            android:text="Destinations:"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:listitem="@layout/item_layout"
+            android:scrollbars="vertical"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:id="@+id/accomodationsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Accomodations:"
+            android:paddingTop="25dp"
+            android:paddingLeft="10dp"/>
+
+        <!-- Accomodation list should go in here, constrained between accomodationsText and diningReservationsText -->
+        <!-- Must have id accomodationsList -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/hotel_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:text="Hotel Name" />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/checkin_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Check-in" />
+
+            <TextView
+                android:id="@+id/checkout_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Check-out" />
+
+            <TextView
+                android:id="@+id/num_rooms_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Number of Rooms" />
+
+            <TextView
+                android:id="@+id/room_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room Type" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/diningReservationsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dining Reservations:"
+            android:textSize="30sp"
+            android:paddingTop="25dp"
+            android:paddingLeft="10dp"/>
+
+        <!-- Reservation list should go in here, constrained between diningReservationsText and noteText -->
+        <!-- Must have id reservationList -->
+
+        <TextView
+            android:id="@+id/reservationList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PUT DINING LIST HERE"
+            android:textSize="30sp"/>
+
+
+        <TextView
+            android:id="@+id/notesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes:"
+            android:textSize="30sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={note}"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+</layout>
